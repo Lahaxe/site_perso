@@ -10,6 +10,8 @@ Date de création : 2016-03-05
 /*----------------------------------- TOUT ------------------------------------*/
 *
 {
+    margin: 0px;
+    padding: 0px;
 }
 
 /*-----------------------------------------------------------------------------*/
@@ -17,14 +19,40 @@ Date de création : 2016-03-05
 body
 {
     background-color: #DDDDDD;
+    max-width: 1000px;
     margin: 0 auto;
-    width: 1000px;
+}
+
+h1 
+{
+    border-bottom: 2px solid #94B6D2;
+	font-size: 26px;
+    margin: 0px 15px 15px 15px;
+    padding-bottom: 5px;
+	text-align:center;
 }
 
 /*-----------------------------------------------------------------------------*/
 /*----------------------------------- MENU ------------------------------------*/
 #menu
 {
+    border: 1px solid red;
+    padding: 10px 20px;
+    overflow: auto;
+}
+
+#menu ul
+{
+    list-style: none;
+    width: 100%;
+}
+
+#menu li
+{
+    border: 1px solid red;
+    margin: 0px 5px;
+    padding: 4px;
+    text-align: center;
 }
 
 /*-----------------------------------------------------------------------------*/
@@ -33,8 +61,371 @@ body
 {
 }
 
+#content
+{
+    background-color: #E9F0F4;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #888888;
+    margin: 10px;
+    min-height: 100px;
+    padding: 5px;
+}
+
+#content.information
+{
+    float: left;
+    width: 95%;
+}
+
+#content.information table
+{
+    width: 100%;
+}
+
+#content.information table.table_info_perso
+{
+    margin-bottom: 10px;
+}
+
+#content.information tr
+{
+    height: 25px;
+}
+
+#content.information td.gauche
+{
+    text-align: left;
+    width: 60%;
+}
+
+#content.information td.droite
+{
+    text-align: right;
+    width: 30%;
+}
+
+#content.information td.image
+{
+    text-align: center;
+    width: 20px;
+    height: 20px;
+}
+
+#content.information td.image img
+{
+    width: 20px;
+    height: 20px;
+}
+
+#content.information td.social
+{
+    text-align: center;
+    height: 20px;
+}
+
+#rsocial
+{
+    margin: 0px 5px;
+    width: 90%;
+    border-radius: 10px;
+    border: 1px solid #DDDDDD;
+    box-shadow: 0px 0px 4px #CCCCCC;
+}
+
+#rsocial img
+{
+    height: 25px;
+    margin-top: 3px;
+}
+
+#content.photo
+{
+    text-align: center;
+    background-color: #FBE5DA;
+    float: right;
+    visibility: collapse;
+    width: 0%;
+}
+
+#content.photo img
+{
+    height: 130px;
+    margin: 15px 0px;
+}
+
+#content.photo p
+{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 3px;
+}
+
+#content.formation
+{
+    clear: both;
+    height: 185px;
+}
+
+#diplome
+{
+    height: 94%;
+    width: 31%;
+    border: 1px solid #DDDDDD;
+    border-radius: 10px;
+    float: left;
+    margin: 5px 10px;
+    box-shadow: 0px 0px 6px #CCCCCC;
+}
+
+#diplome table
+{
+    margin: 10px 0px;
+}
+
+#diplome td
+{
+    text-align: center;
+}
+
+#diplome td.image
+{
+    height: 60px;
+    width: 60px;
+}
+
+#diplome td.image img
+{
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+#diplome td.titre
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#diplome td.annee
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#diplome td a
+{
+    text-decoration: none;
+    color: black;
+}
+
+/*#anim_form
+{
+    border: 1px solid black;
+    height: 100%;
+    float: left;
+    width: 15%;
+    transition: all 0.7s;
+    overflow: hidden;
+}
+
+#anim_form:hover
+{
+    width: 60%;
+}*/
+
+#experience
+{
+    clear: both;
+}
+
+#content.experience
+{
+    float: left;
+    width: 68%;
+}
+
+#emploi
+{
+    width: 100%;
+    clear: both;
+    border: 1px solid #DDDDDD;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px #CCCCCC;
+    margin-bottom: 10px;
+    min-height: 74px;
+}
+
+#emploi img
+{
+    margin: 5px;
+    width: 64px;
+    height: 64px;
+}
+
+#emploi table
+{
+    width: 100%;
+}
+
+#mission
+{
+    min-height: 60px;
+}
+
+#mission.first
+{
+    width: 100%;
+}
+
+#mission.notfirst
+{
+    width: 100%;
+    clear: both;
+}
+
+#mission img
+{
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+#emploi_logo
+{
+    width: 76px;
+    float: left;
+}
+
+#emploi_description
+{
+    margin-left: 78px;
+}
+
+#emploi_description td.td_boite
+{
+    width: 35%;
+    text-align: left;
+}
+
+#emploi_description td.td_lieux
+{
+    width: 25%;
+    text-align: center;
+}
+
+#emploi_description td.td_duree
+{
+    width: 35%;
+    text-align: right;
+    padding-right: 5px;
+}
+    
+#content.competence
+{
+    float: right;
+    width: 26%;
+}
+
+#content.competence table
+{
+    margin: 5px 10px;
+}
+
+#content.competence th
+{
+    text-align: left;
+}
+
+#content.competence th.nonpremier
+{
+    border-top: 1px solid #CCCCCC;
+    padding-top: 10px;
+}
+
+#content.competence img
+{
+    margin: 4px 2px;
+    width: 22px;
+    height: 22px;
+}
+
+#content.loisirs
+{
+    clear: both;
+}
+
 /*-----------------------------------------------------------------------------*/
 /*----------------------------------- FOOTER ----------------------------------*/
 #footer
 {
+    clear: both;
+    padding: 10px 20px;
+    overflow: auto;
+}
+
+@media only screen and (min-width: 480px)
+{
+    #menu ul
+        {
+        float: left;
+    }
+    
+    #menu li 
+        {
+        float: left;
+        padding: 4px;
+        width: 16%;
+    }
+    
+    #content.information
+        {
+        width: 95%;
+    }
+    
+    #content.photo
+        {
+        visibility: collapse;
+        width: 0%;
+    }
+}
+
+@media only screen and (min-width: 768px)
+{
+    #menu ul
+        {
+        float: right;
+    }
+    
+    #menu li 
+        {
+        float: left;
+        padding: 4px;
+        width: 17%;
+    }
+    
+    #content.information
+        {
+        width: 76%;
+    }
+    
+    #content.photo
+        {
+        visibility: visible;
+        width: 18%;
+    }
+}
+
+@media only screen and (min-width: 1140px)
+{
+    #content.information
+        {
+        width: 66%;
+    }
+    
+    #content.photo
+        {
+        visibility: visible;
+        width: 28%;
+    }
 }

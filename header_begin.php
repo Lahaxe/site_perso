@@ -2,16 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" >
 
 <head>
-    <title>tobedefined</title> 
+    <title>Lahaxe Romain - Ingénieur en Cognitique</title> 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="description" content="tobedefined" />  
+    <meta name="description" content="Curriculum Vitae de Romain Lahaxe - Ingénieur en Cognitique" />  
     <meta name="robots" content="index" /> 
     <meta name="revisit-after" content="7 days" /> 
-    <meta name="copyright" content="© tobedefined" /> 
-    <meta name="keywords" content="tobedefined" /> 
+    <meta name="copyright" content="© Lahaxe Romain" /> 
+    <meta name="keywords" content="Lahaxe, Romain, Ingénieur, Cognitique, Ergonomie, Développement, IHM, interface, C++, Qt, C#" /> 
 
-    <link rel="stylesheet" media="screen" type="text/css" title="design" href="CSS/style_main.css" /> 
-    <link rel="canonical" href="http://tobedefined" />
+    <link rel="stylesheet" media="screen" type="text/css" title="design" href="CSS/style_main.css" />
+    <script src="JavaScript/lib/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+    <link rel="canonical" href="http://rom.lahaxe.free.fr" />
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="icon" type="image/gif" href="favicon.gif" />
     

@@ -23,8 +23,8 @@
 			$this->_location = $location;
 			$this->_link = $link;
 			$this->_picture = $picture;
-			$this->_from = $from;
-			$this->_to = $to;
+			if ($from ==null) $this->_from = time(); else $this->_from = strtotime($from);
+			if ($to ==null) $this->_to = time(); else $this->_to = strtotime($to);
 			$this->_description = $description;
 			$this->_missions = $missions;
             $this->_ismission = $ismission;

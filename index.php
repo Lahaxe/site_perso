@@ -101,80 +101,80 @@ date_default_timezone_set('Europe/Paris');
 
 $hrteam_mission1 = new ItemEmploi("Leroy Merlin", "Responsable d'Application", "Lezennes (59)", 
                                   "http://www.leroymerlin.fr/", "images/leroymerlin.png", 
-                                  strtotime("2017-10-01"), time(),
+                                  "2017-10-01", null,
                                   "Responsable des applications de référencement de l'offre Leroy Merlin France", 
                                   array(), true);
                                   
 $hrteam_mission2 = new ItemEmploi("Piivo", "Développeur", "Tournai (Belgique)", 
                                   "http://www.piivo.com/", "images/piivo.png", 
-                                  strtotime("2016-04-01"), strtotime("2017-10-01"), 
+                                  "2016-04-01", "2017-10-01", 
                                   "Développement en C++ d'un plugin pour Adobe InDesign<br>Développement en C++ et C# d'un outil de Balisage magasin", 
                                   array(), true);
                                   
 $hrteam_mission3 = new ItemEmploi("Saint-Maclou", "Développeur", "Wattrelos (59)", 
                                   "http://www.saint-maclou.com/", "images/stmaclou.png", 
-                                  strtotime("2016-01-01"), strtotime("2016-04-01"), 
+                                  "2016-01-01", "2016-04-01", 
                                   "Développement d'un client C++/Qt pour interroger un service Microsoft Dynamics AX exposé en HTTP", 
                                   array(), true);
                                   
 $hrteam = new ItemEmploi("HR Team", "Consultant", "Lille (59)", "http://www.hr-team.net/",
-                         "images/hrteam.png", strtotime("2016-01-01"), time(),
+                         "images/hrteam.png", "2016-01-01", null,
                          "", array($hrteam_mission1, $hrteam_mission2, $hrteam_mission3));
 $hrteam->print_(2);
 
 $cnrs = new ItemEmploi("C.N.R.S", "Ingénieur de recherche", "Strasbourg (67)", "http://www.cnrs.fr/",
-                       "images/cnrs.png", strtotime("2014-05-01"), strtotime("2016-01-01"),
+                       "images/cnrs.png", "2014-05-01", "2016-01-01",
                        "Implémentation de logiciel de gestion d’images IRM pour la recherche préclinique, respectant le standard DICOM");
 $cnrs->print_(2);
 
 $akka_mission1 = new ItemEmploi("Nexter Systems", "Développeur/Ergonome", "Guyancourt (78)", 
                                 "http://www.nexter-group.fr/", "images/nexter.png", 
-                                strtotime("2011-11-01"), strtotime("2014-05-01"), 
+                                "2011-11-01", "2014-05-01", 
                                 "Maquettage d'IHM, Développement de logiciels, ergonomie IHM", 
                                 array(), true);
                                   
 $akka_mission2 = new ItemEmploi("Thales Communications & Security", "Développeur", "Gennevilliers (92)", 
                                   "https://www.thalesgroup.com/fr", "images/thales.png", 
-                                  strtotime("2011-10-01"), strtotime("2011-11-01"), 
+                                  "2011-10-01", "2011-11-01", 
                                   "Développement d'un outil de test en Java", 
                                   array(), true);
                                   
 $akka = new ItemEmploi("AKKA Technologies", "Consultant", "Levallois-Perret (92)", "https://www.akka-technologies.com/",
-                       "images/akka.png", strtotime("2011-10-01"), strtotime("2014-05-01"),
+                       "images/akka.png", "2011-10-01", "2014-05-01",
                        "", array($akka_mission1, $akka_mission2));
 $akka->print_(2);
 
 $incka_mission1 = new ItemEmploi("Safran Morpho", "Développeur", "Osny (95)", 
                                 "http://www.morpho.com/", "images/morpho.png", 
-                                strtotime("2010-08-01"), strtotime("2011-10-01"), 
+                                "2010-08-01", "2011-10-01", 
                                 "Développement de logiciels biométriques (Empreintes, portraits et iris)", 
                                 array(), true);
                                   
 $incka = new ItemEmploi("INCKA (Astek)", "Consultant", "Boulogne-Billancourt (92)", "http://www.groupeastek.com/fr",
-                       "images/incka.png", strtotime("2010-08-01"), strtotime("2011-10-01"),
+                       "images/incka.png", "2010-08-01", "2011-10-01",
                        "", array($incka_mission1));
 $incka->print_(2);
 
 $ensc_mission1 = new ItemEmploi("Thales Optronique", "Stage de fin d'étude", "Elancourt (78)", 
                                 "https://www.thalesgroup.com/fr", "images/thales.png", 
-                                strtotime("2010-02-01"), strtotime("2010-08-01"), 
+                                "2010-02-01", "2010-08-01", 
                                 "Implémentation du module de préparation de mission pour les robots terrestres", 
                                 array(), true);
                                   
 $ensc_mission2 = new ItemEmploi("Laboratoire IMF", "Stage de 2ème année", "Bordeaux (33)", 
                                 "http://www.cnrs.fr/", "images/cnrs.png", 
-                                strtotime("2009-04-01"), strtotime("2009-07-01"), 
+                                "2009-04-01", "2009-07-01", 
                                 "Implémentation d'une interface Matlab pour faciliter le traitement des images IRM issues d’un groupe de patients", 
                                 array(), true);
                                   
 $ensc_mission3 = new ItemEmploi("Technic'Ortho", "Stage de 1ère année", "Lay-Saint-Christophe (54)", 
                                 "http://www.technic-ortho.com/", "images/technicortho.png", 
-                                strtotime("2008-05-01"), strtotime("2008-07-01"), 
+                                "2008-05-01", "2008-07-01", 
                                 "Conception de prothèses et d'orthèses", 
                                 array(), true);
                                   
 $ensc = new ItemEmploi("ENSC", "Stagiaire", "Bordeaux (33)", "https://www.ensc.fr/",
-                       "images/ensc.png", strtotime("2007-09-01"), strtotime("2010-08-01"),
+                       "images/ensc.png", "2007-09-01", "2010-08-01",
                        "", array($ensc_mission1, $ensc_mission2, $ensc_mission3), false, false);
 $ensc->print_(2);
 ?>

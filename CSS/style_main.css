@@ -164,23 +164,24 @@ h1
 #content.formation
 {
     clear: both;
-    height: 185px;
+    height: 100px;
 }
 
 #diplome
 {
-    height: 94%;
-    width: 31%;
+    height: 92%;
+    width: 23%;
     border: 1px solid #DDDDDD;
     border-radius: 10px;
     float: left;
-    margin: 5px 10px;
+    margin: 5px 8px;
     box-shadow: 0px 0px 6px #CCCCCC;
 }
 
 #diplome table
 {
-    margin: 10px 0px;
+    width: 100%;
+    margin: 10px 0px 0px 0px;
 }
 
 #diplome td
@@ -190,26 +191,40 @@ h1
 
 #diplome td.image
 {
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
 }
 
 #diplome td.image img
 {
     margin: 5px;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+}
+
+#diplome td.imagecorrection
+{
+    height: 40px;
+    width: 1px;
+}
+
+#diplome td.imagecorrection img
+{
+    margin: 5px 0px;
+    width: 1px;
+    height: 40px;
 }
 
 #diplome td.titre
 {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
 }
 
 #diplome td.annee
 {
-    font-size: 20px;
+    border-bottom: 1px solid #94B6D2;
+    font-size: 16px;
     font-weight: bold;
 }
 
@@ -242,7 +257,7 @@ h1
 #content.experience
 {
     float: left;
-    width: 68%;
+    width: 71%;
 }
 
 #emploi
@@ -256,75 +271,81 @@ h1
     min-height: 74px;
 }
 
-#emploi img
-{
-    margin: 5px;
-    width: 64px;
-    height: 64px;
-}
-
 #emploi table
 {
     width: 100%;
 }
 
-#mission
+#emploi td.emploi_logo
 {
-    min-height: 60px;
-}
-
-#mission.first
-{
-    width: 100%;
-}
-
-#mission.notfirst
-{
-    width: 100%;
-    clear: both;
-}
-
-#mission img
-{
-    margin: 5px;
-    width: 50px;
-    height: 50px;
-}
-
-#emploi_logo
-{
-    width: 76px;
-    float: left;
-}
-
-#emploi_description
-{
-    margin-left: 78px;
-}
-
-#emploi_description td.td_boite
-{
-    width: 35%;
-    text-align: left;
-}
-
-#emploi_description td.td_lieux
-{
-    width: 25%;
     text-align: center;
 }
 
-#emploi_description td.td_duree
+#emploi td.emploi_logo img
 {
-    width: 35%;
-    text-align: right;
-    padding-right: 5px;
+    max-height: 60px;
+    max-width: 60px;
 }
-    
+
+#emploi img.picto
+{
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+#emploi td.mission_logo
+{
+    width: 66px;
+}
+
+#emploi td.mission_logo img
+{
+    float: right;
+    max-height: 50px;
+    max-width: 50px;
+}
+
+#emploi tr.principal
+{
+}
+
+#emploi tr.mission
+{
+	font-size: 14px;
+}
+
+#emploi td.td_role
+{
+    font-weight: bold;
+}
+
+#emploi td.td_role a
+{
+    color: black;
+}
+
+#emploi td.td_lieux
+{
+    width: 210px;
+}
+
+#emploi td.td_duree
+{
+    width: 110px;
+}
+
+#emploi tr.mission_espace
+{
+    height: 10px;
+}
+
+
+
 #content.competence
 {
     float: right;
-    width: 26%;
+    width: 23%;
 }
 
 #content.competence table
@@ -346,8 +367,8 @@ h1
 #content.competence img
 {
     margin: 4px 2px;
-    width: 22px;
-    height: 22px;
+    width: 16px;
+    height: 16px;
 }
 
 #content.loisirs

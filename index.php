@@ -48,9 +48,6 @@
             <table>
                 <tr>
 <?php
-$item1 = new ItemReseauSocial("Google+", "https://plus.google.com/108406210310846578452", "images/google+.svg");
-$item1->print_(4);
-
 $item2 = new ItemReseauSocial("LinkedIn", "https://fr.linkedin.com/in/romain-lahaxe-18565a84", "images/linkedin.svg");
 $item2->print_(4);
 
@@ -69,11 +66,17 @@ $item3->print_(4);
     <div id="formation">
         <div id="content" class="formation">
 <?php
-$diplome1 = new ItemDiplome("BAC S", "Baccalauréat S<br/>Option SVT", 
-                            "Lycée Louis de Cormontaigne<br/>Metz (57)",
-                            "Lycée Cormontaigne", "http://www.lycee-cormontaigne-metz.fr/site/",
-                            "2005", "images/baccalaureat_s.png", "");
-$diplome1->print_(2);
+$diplome4 = new ItemDiplome("Formation Agile", "Initiation au rôle de <br/>Product Owner", 
+                            "",
+                            "Ecole Nationale Supérieure de Cognitique", "https://www.ensc.fr/",
+                            "2019", "", "");
+$diplome4->print_(2);
+
+$diplome3 = new ItemDiplome("Diplôme d'ingénieur en Cognitique", "Ingénieur en<br/>Cognitique", 
+                            "Ecole Nationale Supérieure de Cognitique<br/>Bordeaux (33)",
+                            "Ecole Nationale Supérieure de Cognitique", "https://www.ensc.fr/",
+                            "2010", "images/ingenieur.png", "images/ensc.png");
+$diplome3->print_(2);
 
 $diplome2 = new ItemDiplome("Prépa BCPST", "Classe Préparatoire<br/>BCPST", 
                             "Lycée Georges de la Tour<br/>Metz (57)",
@@ -81,11 +84,11 @@ $diplome2 = new ItemDiplome("Prépa BCPST", "Classe Préparatoire<br/>BCPST",
                             "2007", "", "");
 $diplome2->print_(2);
 
-$diplome3 = new ItemDiplome("Diplôme d'ingénieur en Cognitique", "Ingénieur en<br/>Cognitique", 
-                            "Ecole Nationale Supérieure de Cognitique<br/>Bordeaux (33)",
-                            "Ecole Nationale Supérieure de Cognitique", "https://www.ensc.fr/",
-                            "2010", "images/ingenieur.png", "images/ensc.png");
-$diplome3->print_(2);
+$diplome1 = new ItemDiplome("BAC S", "Baccalauréat S<br/>Option SVT", 
+                            "Lycée Louis de Cormontaigne<br/>Metz (57)",
+                            "Lycée Cormontaigne", "http://www.lycee-cormontaigne-metz.fr/site/",
+                            "2005", "images/baccalaureat_s.png", "");
+$diplome1->print_(2);
 ?>
         </div>
     </div>
@@ -94,84 +97,93 @@ $diplome3->print_(2);
         <div id="content" class="experience">
             <h1>Expériences</h1>
 <?php
-$hrteam_mission1 = new ItemEmploi("EvolutionCom", "Développeur", "Tournai (Belgique)", 
-                                  "http://www.evolutioncom.eu/", "images/evolution.png", 
-                                  "Avril 2016", "Actuellement", 
-                                  "Développement en C++ d'un plugin pour Adobe InDesign", 
+date_default_timezone_set('Europe/Paris');
+
+$hrteam_mission1 = new ItemEmploi("Leroy Merlin", "Responsable d'Application", "Lezennes (59)", 
+                                  "http://www.leroymerlin.fr/", "images/leroymerlin.png", 
+                                  strtotime("2017-10-01"), time(),
+                                  "Responsable des applications de référencement de l'offre Leroy Merlin France", 
                                   array(), true);
                                   
-$hrteam_mission2 = new ItemEmploi("Saint-Maclou", "Développeur", "Wattrelos (59)", 
+$hrteam_mission2 = new ItemEmploi("Piivo", "Développeur", "Tournai (Belgique)", 
+                                  "http://www.piivo.com/", "images/piivo.png", 
+                                  strtotime("2016-04-01"), strtotime("2017-10-01"), 
+                                  "Développement en C++ d'un plugin pour Adobe InDesign<br>Développement en C++ et C# d'un outil de Balisage magasin", 
+                                  array(), true);
+                                  
+$hrteam_mission3 = new ItemEmploi("Saint-Maclou", "Développeur", "Wattrelos (59)", 
                                   "http://www.saint-maclou.com/", "images/stmaclou.png", 
-                                  "Janvier 2016", "Avril 2016", 
+                                  strtotime("2016-01-01"), strtotime("2016-04-01"), 
                                   "Développement d'un client C++/Qt pour interroger un service Microsoft Dynamics AX exposé en HTTP", 
                                   array(), true);
                                   
 $hrteam = new ItemEmploi("HR Team", "Consultant", "Lille (59)", "http://www.hr-team.net/",
-                         "images/hrteam.png", "Janvier 2016", "Actuellement",
-                         "", array($hrteam_mission1, $hrteam_mission2));
+                         "images/hrteam.png", strtotime("2016-01-01"), time(),
+                         "", array($hrteam_mission1, $hrteam_mission2, $hrteam_mission3));
 $hrteam->print_(2);
 
 $cnrs = new ItemEmploi("C.N.R.S", "Ingénieur de recherche", "Strasbourg (67)", "http://www.cnrs.fr/",
-                       "images/cnrs.png", "Mai 2014", "Décembre 2015",
+                       "images/cnrs.png", strtotime("2014-05-01"), strtotime("2016-01-01"),
                        "Implémentation de logiciel de gestion d’images IRM pour la recherche préclinique, respectant le standard DICOM");
 $cnrs->print_(2);
 
 $akka_mission1 = new ItemEmploi("Nexter Systems", "Développeur/Ergonome", "Guyancourt (78)", 
                                 "http://www.nexter-group.fr/", "images/nexter.png", 
-                                "Novembre 2011", "Avril 2014", 
+                                strtotime("2011-11-01"), strtotime("2014-05-01"), 
                                 "Maquettage d'IHM, Développement de logiciels, ergonomie IHM", 
                                 array(), true);
                                   
 $akka_mission2 = new ItemEmploi("Thales Communications & Security", "Développeur", "Gennevilliers (92)", 
                                   "https://www.thalesgroup.com/fr", "images/thales.png", 
-                                  "Octobre 2011", "Novembre 2011", 
+                                  strtotime("2011-10-01"), strtotime("2011-11-01"), 
                                   "Développement d'un outil de test en Java", 
                                   array(), true);
                                   
 $akka = new ItemEmploi("AKKA Technologies", "Consultant", "Levallois-Perret (92)", "https://www.akka-technologies.com/",
-                       "images/akka.png", "Octobre 2011", "Avril 2014",
+                       "images/akka.png", strtotime("2011-10-01"), strtotime("2014-05-01"),
                        "", array($akka_mission1, $akka_mission2));
 $akka->print_(2);
 
 $incka_mission1 = new ItemEmploi("Safran Morpho", "Développeur", "Osny (95)", 
                                 "http://www.morpho.com/", "images/morpho.png", 
-                                "Août 2010", "Septembre 2011", 
+                                strtotime("2010-08-01"), strtotime("2011-10-01"), 
                                 "Développement de logiciels biométriques (Empreintes, portraits et iris)", 
                                 array(), true);
                                   
 $incka = new ItemEmploi("INCKA (Astek)", "Consultant", "Boulogne-Billancourt (92)", "http://www.groupeastek.com/fr",
-                       "images/incka.png", "Août 2010", "Septembre 2011",
+                       "images/incka.png", strtotime("2010-08-01"), strtotime("2011-10-01"),
                        "", array($incka_mission1));
 $incka->print_(2);
 
 $ensc_mission1 = new ItemEmploi("Thales Optronique", "Stage de fin d'étude", "Elancourt (78)", 
                                 "https://www.thalesgroup.com/fr", "images/thales.png", 
-                                "Février 2010", "Juillet 2010", 
+                                strtotime("2010-02-01"), strtotime("2010-08-01"), 
                                 "Implémentation du module de préparation de mission pour les robots terrestres", 
                                 array(), true);
                                   
 $ensc_mission2 = new ItemEmploi("Laboratoire IMF", "Stage de 2ème année", "Bordeaux (33)", 
                                 "http://www.cnrs.fr/", "images/cnrs.png", 
-                                "Avril 2009", "Juillet 2009", 
+                                strtotime("2009-04-01"), strtotime("2009-07-01"), 
                                 "Implémentation d'une interface Matlab pour faciliter le traitement des images IRM issues d’un groupe de patients", 
                                 array(), true);
                                   
 $ensc_mission3 = new ItemEmploi("Technic'Ortho", "Stage de 1ère année", "Lay-Saint-Christophe (54)", 
                                 "http://www.technic-ortho.com/", "images/technicortho.png", 
-                                "Mai 2008", "Juillet 2008", 
+                                strtotime("2008-05-01"), strtotime("2008-07-01"), 
                                 "Conception de prothèses et d'orthèses", 
                                 array(), true);
                                   
 $ensc = new ItemEmploi("ENSC", "Stagiaire", "Bordeaux (33)", "https://www.ensc.fr/",
-                       "images/ensc.png", "Septembre 2007", "Juillet 2010",
-                       "", array($ensc_mission1, $ensc_mission2, $ensc_mission3));
+                       "images/ensc.png", strtotime("2007-09-01"), strtotime("2010-08-01"),
+                       "", array($ensc_mission1, $ensc_mission2, $ensc_mission3), false, false);
 $ensc->print_(2);
 ?>
         </div>
         <div id="content" class="competence">
+            <h1>Compétences</h1>
             <table>
                 <tr>
-                    <th class="premier" colspan="6">Compétences :</th>
+                    <th class="premier" colspan="6">Techniques :</th>
                 </tr>
 <?php
 $competence1 = new ItemCompetence("C++", 5);
@@ -180,10 +192,7 @@ $competence1->print_(3);
 $competence1 = new ItemCompetence("Qt", 4);
 $competence1->print_(3);
 
-$competence1 = new ItemCompetence("Ergonomie", 4);
-$competence1->print_(3);
-
-$competence1 = new ItemCompetence("C#", 3);
+$competence1 = new ItemCompetence("C#", 4);
 $competence1->print_(3);
 
 $competence1 = new ItemCompetence("XAML", 3);
@@ -201,10 +210,20 @@ $competence1->print_(3);
 $competence1 = new ItemCompetence("PHP", 2);
 $competence1->print_(3);
 
-$competence1 = new ItemCompetence("Matlab", 2);
+$competence1 = new ItemCompetence("Java", 1);
+$competence1->print_(3);
+?>
+                <tr>
+                    <th class="nonpremier" colspan="6">Méthodes :</th>
+                </tr>
+<?php
+$competence1 = new ItemCompetence("Ergonomie", 5);
 $competence1->print_(3);
 
-$competence1 = new ItemCompetence("Java", 1);
+$competence1 = new ItemCompetence("Agile", 4);
+$competence1->print_(3);
+
+$competence1 = new ItemCompetence("Scrum", 4);
 $competence1->print_(3);
 ?>
                 <tr>

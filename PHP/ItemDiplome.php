@@ -37,21 +37,16 @@
             echo_line("<tr>", $tabulation);
             if ($this->_picture1 == "")
             {
-                echo_line("<td class=\"image\"></td>", add_tabulation($tabulation));
+                echo_line("<td class=\"imagecorrection\"><img src=\"images/test.png\" /></td>", add_tabulation($tabulation));
             }
             else
             {
                 echo_line("<td class=\"image\"><img src=\"".$this->_picture1."\" alt=\"".$this->_name."\" title=\"".$this->_name."\" /></td>", add_tabulation($tabulation));
             }
             echo_line("<td class=\"titre\">".$this->_text1."</td>", $tabulation);
-            echo_line("<td class=\"image\"></td>", $tabulation);
-            echo_line("</tr>", remove_tabulation($tabulation));
-            echo_line("<tr>", $tabulation);
-            echo_line("<td class=\"image\"></td>", add_tabulation($tabulation));
-            echo_line("<td><a href=\"".$this->_school_url."\" title=\"".$this->_school."\">".$this->_text2."</a></td>", $tabulation);
             if ($this->_picture2 == "")
             {
-                echo_line("<td class=\"image\"></td>", $tabulation);
+                // Nothing to do
             }
             else
             {

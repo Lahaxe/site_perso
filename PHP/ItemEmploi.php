@@ -70,12 +70,12 @@
                 echo_line("<td class=\"td_duree\"><img class=\"picto\" src=\"images/date.svg\" title=\"".date('F Y', $this->_from)." - ".date('F Y', $this->_to)."\" />".$diffTimeStr."</td>", $tabulation);
                 echo_line("</tr>", remove_tabulation($tabulation));
                 
-                echo_line("<tr class=\"mission\">", add_tabulation($tabulation));
+                echo_line("<tr class=\"mission\">", $tabulation);
                 echo_line("<td colspan=\"3\">".$this->_description."</td>", add_tabulation($tabulation));
                 echo_line("</tr>", remove_tabulation($tabulation));
                 
-                echo_line("<tr class=\"mission_espace\">", add_tabulation($tabulation));
-                echo_line("</tr>", remove_tabulation($tabulation));
+                echo_line("<tr class=\"mission_espace\">", $tabulation);
+                echo_line("</tr>", $tabulation);
             }
             else
             {
@@ -111,12 +111,12 @@
                     foreach ($this->_missions as $mission)
                     {
                         $mission->_ismission = true;
-                        $mission->print_($tab+2);
+                        $mission->print_($tab+3);
                     }
                 }
                 else
                 {
-                    echo_line("<tr class=\"mission\">", add_tabulation($tabulation));
+                    echo_line("<tr class=\"mission\">", $tabulation);
                     echo_line("<td colspan=\"3\">".$this->_description."</td>", add_tabulation($tabulation));
                     echo_line("</tr>", remove_tabulation($tabulation));
                     

@@ -113,7 +113,7 @@ $hrteam_mission2 = new ItemEmploi("Piivo", "Développeur", "Tournai (Belgique)",
                                   
 $hrteam_mission3 = new ItemEmploi("Saint-Maclou", "Développeur", "Wattrelos (59)", 
                                   "http://www.saint-maclou.com/", "images/stmaclou.png", 
-                                  "2016-01-01", "2016-04-01", 
+                                  "2016-01-01", "2016-04-11", 
                                   "Développement d'un client C++/Qt pour interroger un service Microsoft Dynamics AX exposé en HTTP", 
                                   array(), true);
                                   
@@ -129,7 +129,7 @@ $cnrs->print_(2);
 
 $akka_mission1 = new ItemEmploi("Nexter Systems", "Développeur/Ergonome", "Guyancourt (78)", 
                                 "http://www.nexter-group.fr/", "images/nexter.png", 
-                                "2011-11-01", "2014-05-01", 
+                                "2011-11-01", "2014-05-11", 
                                 "Maquettage d'IHM, Développement de logiciels, ergonomie IHM", 
                                 array(), true);
                                   
@@ -157,13 +157,13 @@ $incka->print_(2);
 
 $ensc_mission1 = new ItemEmploi("Thales Optronique", "Stage de fin d'étude", "Elancourt (78)", 
                                 "https://www.thalesgroup.com/fr", "images/thales.png", 
-                                "2010-02-01", "2010-08-01", 
+                                "2010-02-01", "2010-08-11", 
                                 "Implémentation du module de préparation de mission pour les robots terrestres", 
                                 array(), true);
                                   
 $ensc_mission2 = new ItemEmploi("Laboratoire IMF", "Stage de 2ème année", "Bordeaux (33)", 
                                 "http://www.cnrs.fr/", "images/cnrs.png", 
-                                "2009-04-01", "2009-07-01", 
+                                "2009-04-01", "2009-07-11", 
                                 "Implémentation d'une interface Matlab pour faciliter le traitement des images IRM issues d’un groupe de patients", 
                                 array(), true);
                                   

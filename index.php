@@ -27,7 +27,7 @@
     
     <div id="info_perso">
         <div id="content" class="information">
-            <h1>Informations Personnelles</h1>
+            <h1><?php echo constant("PERSONNAL_SECTION"); ?></h1>
             <table class="table_info_perso">
                 <tr>
                     <td class="image"><img src="images/personne.svg" title="Romain" /></td>
@@ -39,7 +39,7 @@
                     <td class="image" rowspan=2><img src="images/carte.svg" title="Adresse" /></td>
                     <td class="gauche">42 rue des Pyramides</td>
                     <td class="image"><img src="images/telephone.svg" title="Téléphone" /></td>
-                    <td class="droite"><b>06 28 71 39 29</b></td>
+                    <td class="droite"><b>+33(0)6 28 71 39 29</b></td>
                 </tr>
                 <tr>
                     <td>59 000 Lille</td>
@@ -48,7 +48,7 @@
                 </tr>
                 <tr>
                     <td class="image"><img src="images/calendrier.svg" title="Date de naissance" /></td>
-                    <td class="gauche">Né le 27/09/1987 à Woippy (57)</td>
+                    <td class="gauche"><?php echo constant("PERS_BIRTH"); ?></td>
                     <td class="image"></td>
                     <td class="droite"></td>
                 </tr>
@@ -67,7 +67,7 @@ $item3->print_(4);
         </div>
         <div id="content" class="photo">
             <img src="images/romain.jpg" alt="Ma Photo" title="Romain" />
-            <p>Ingénieur en Cognitique</p>
+            <p><?php echo constant("ROLE_SECTION"); ?></p>
         </div>
     </div>
 
@@ -103,7 +103,7 @@ $diplome1->print_(2);
 
     <div id="experience">
         <div id="content" class="experience">
-            <h1>Expériences</h1>
+            <h1><?php echo constant("EXPERIENCE_SECTION"); ?></h1>
 <?php
 date_default_timezone_set('Europe/Paris');
 
@@ -188,10 +188,10 @@ $ensc->print_(2);
 ?>
         </div>
         <div id="content" class="competence">
-            <h1>Compétences</h1>
+            <h1><?php echo constant("SKILLS_SECTION"); ?></h1>
             <table>
                 <tr>
-                    <th class="premier" colspan="6">Techniques :</th>
+                    <th class="premier" colspan="6"><?php echo constant("SKIL_TECHNICAL"); ?></th>
                 </tr>
 <?php
 $competence1 = new ItemCompetence("C++", 5);
@@ -222,7 +222,7 @@ $competence1 = new ItemCompetence("Java", 1);
 $competence1->print_(3);
 ?>
                 <tr>
-                    <th class="nonpremier" colspan="6">Méthodes :</th>
+                    <th class="nonpremier" colspan="6"><?php echo constant("SKIL_METHODS"); ?></th>
                 </tr>
 <?php
 $competence1 = new ItemCompetence("Ergonomie", 5);
@@ -235,7 +235,7 @@ $competence1 = new ItemCompetence("Scrum", 4);
 $competence1->print_(3);
 ?>
                 <tr>
-                    <th class="nonpremier" colspan="6">Langues :</th>
+                    <th class="nonpremier" colspan="6"><?php echo constant("SKIL_LANGUAGES"); ?></th>
                 </tr>
 <?php
 $competence1 = new ItemCompetence("Anglais", 3);

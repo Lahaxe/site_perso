@@ -17,6 +17,14 @@
 
     <!-- _____________________________________________________________________ -->
 
+    <div id="language">
+        <form method="get" action="index.php">
+            <input name="lang" type="hidden" value="<?php echo $lang; ?>">
+            <a href="#" onclick="document.forms[0].lang.value='fr'; document.forms[0].submit();"><img src="images/fr.png" alt="fr" title="Français"></a>
+            <a href="#" onclick="document.forms[0].lang.value='en'; document.forms[0].submit();"><img src="images/en.png" alt="en" title="English"></a>
+        </form>
+    </div>
+    
     <div id="info_perso">
         <div id="content" class="information">
             <h1>Informations Personnelles</h1>

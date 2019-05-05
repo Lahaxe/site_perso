@@ -1,10 +1,31 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" >
 
+<?php
+    if (isset($_GET['lang'])) 
+    {
+        $lang = $_GET['lang'];
+    } 
+    else 
+    {
+        $lang = "fr";
+    }
+    
+    switch ($lang) 
+    {
+        case 'fr':
+            require_once 'lang_fr.php';
+            break;
+        case 'en':
+            require_once 'lang_en.php';
+            break;
+    }
+?>
+
 <head>
-    <title>Lahaxe Romain - Ingénieur en Cognitique</title> 
+    <title><?php echo constant("TITLE"); ?></title> 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="description" content="Curriculum Vitae de Romain Lahaxe - Ingénieur en Cognitique" />  
+    <meta name="description" content="<?php echo constant("DESCRIPTION"); ?>" />  
     <meta name="robots" content="index" /> 
     <meta name="revisit-after" content="7 days" /> 
     <meta name="copyright" content="© Lahaxe Romain" /> 

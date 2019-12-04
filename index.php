@@ -27,7 +27,7 @@
     
     <div id="info_perso">
         <div id="content" class="information">
-            <h1><?php echo constant("PERSONNAL_SECTION"); ?></h1>
+            <h1><?php echo constant("PERSONAL_SECTION"); ?></h1>
             <table class="table_info_perso">
                 <tr>
                     <td class="image"><img src="images/personne.svg" title="Romain" /></td>
@@ -74,25 +74,25 @@ $item3->print_(4);
     <div id="formation">
         <div id="content" class="formation">
 <?php
-$diplome4 = new ItemDiplome("Formation Agile", "Initiation au rôle de <br/>Product Owner", 
+$diplome4 = new ItemDiplome(constant("FORM_AGILE"), constant("FORM_AGIL_TITLE"), 
                             "",
-                            "Ecole Nationale Supérieure de Cognitique", "https://www.ensc.fr/",
+                            "", "https://www.ensc.fr/",
                             "2019", "", "");
 $diplome4->print_(2);
 
-$diplome3 = new ItemDiplome("Diplôme d'ingénieur en Cognitique", "Ingénieur en<br/>Cognitique", 
+$diplome3 = new ItemDiplome(constant("FORM_INGENIEUR"), constant("FORM_INGE_TITLE"), 
                             "Ecole Nationale Supérieure de Cognitique<br/>Bordeaux (33)",
                             "Ecole Nationale Supérieure de Cognitique", "https://www.ensc.fr/",
                             "2010", "images/ingenieur.png", "images/ensc.png");
 $diplome3->print_(2);
 
-$diplome2 = new ItemDiplome("Prépa BCPST", "Classe Préparatoire<br/>BCPST", 
+$diplome2 = new ItemDiplome(constant("FORM_PREPA"), constant("FORM_PREP_TITLE"), 
                             "Lycée Georges de la Tour<br/>Metz (57)",
                             "Lycée Georges de la Tour", "http://www4.ac-nancy-metz.fr/lyc-georges-de-la-tour-metz/",
                             "2007", "", "");
 $diplome2->print_(2);
 
-$diplome1 = new ItemDiplome("BAC S", "Baccalauréat S<br/>Option SVT", 
+$diplome1 = new ItemDiplome(constant("FORM_BACS"), constant("FORM_BACS_TITLE"), 
                             "Lycée Louis de Cormontaigne<br/>Metz (57)",
                             "Lycée Cormontaigne", "http://www.lycee-cormontaigne-metz.fr/site/",
                             "2005", "images/baccalaureat_s.png", "");
@@ -107,84 +107,84 @@ $diplome1->print_(2);
 <?php
 date_default_timezone_set('Europe/Paris');
 
-$hrteam_mission1 = new ItemEmploi("Leroy Merlin", "Responsable d'Application", "Lezennes (59)", 
+$hrteam_mission1 = new ItemEmploi("Leroy Merlin", constant("EXPE_HRTEAM_LM"), "Lezennes (59)", 
                                   "http://www.leroymerlin.fr/", "images/leroymerlin.png", 
                                   "2017-10-01", null,
-                                  "Responsable des applications de référencement de l'offre Leroy Merlin France", 
+                                  constant("EXPE_HRTEAM_LM_MISSION"), 
                                   array(), true);
                                   
-$hrteam_mission2 = new ItemEmploi("Piivo", "Développeur", "Tournai (Belgique)", 
+$hrteam_mission2 = new ItemEmploi("Piivo", constant("EXPE_HRTEAM_PIIVO"), "Tournai (Belgique)", 
                                   "http://www.piivo.com/", "images/piivo.png", 
                                   "2016-04-01", "2017-10-01", 
-                                  "Développement en C++ d'un plugin pour Adobe InDesign<br>Développement en C++ et C# d'un outil de Balisage magasin", 
+                                  constant("EXPE_HRTEAM_PIIVO_MISSION"), 
                                   array(), true);
                                   
-$hrteam_mission3 = new ItemEmploi("Saint-Maclou", "Développeur", "Wattrelos (59)", 
+$hrteam_mission3 = new ItemEmploi("Saint-Maclou", constant("EXPE_HRTEAM_STMACLOU"), "Wattrelos (59)", 
                                   "http://www.saint-maclou.com/", "images/stmaclou.png", 
                                   "2016-01-01", "2016-04-11", 
-                                  "Développement d'un client C++/Qt pour interroger un service Microsoft Dynamics AX exposé en HTTP", 
+                                  constant("EXPE_HRTEAM_STMACLOU_MISSION"), 
                                   array(), true);
                                   
-$hrteam = new ItemEmploi("HR Team", "Consultant", "Lille (59)", "http://www.hr-team.net/",
+$hrteam = new ItemEmploi(constant("EXPE_HRTEAM"), constant("EXPE_HRTEAM_TITLE"), "Lille (59)", "http://www.hr-team.net/",
                          "images/hrteam.png", "2016-01-01", null,
                          "", array($hrteam_mission1, $hrteam_mission2, $hrteam_mission3));
-$hrteam->print_(2);
+$hrteam->print_(2, $lang);
 
-$cnrs = new ItemEmploi("C.N.R.S", "Ingénieur de recherche", "Strasbourg (67)", "http://www.cnrs.fr/",
+$cnrs = new ItemEmploi(constant("EXPE_CNRS"), constant("EXPE_CNRS_TITLE"), "Strasbourg (67)", "http://www.cnrs.fr/",
                        "images/cnrs.png", "2014-05-01", "2016-01-01",
-                       "Implémentation de logiciel de gestion d’images IRM pour la recherche préclinique, respectant le standard DICOM");
-$cnrs->print_(2);
+                       constant("EXPE_CNRS_MISSION"));
+$cnrs->print_(2, $lang);
 
-$akka_mission1 = new ItemEmploi("Nexter Systems", "Développeur/Ergonome", "Guyancourt (78)", 
+$akka_mission1 = new ItemEmploi("Nexter Systems", constant("EXPE_AKKA_NEXTER"), "Guyancourt (78)", 
                                 "http://www.nexter-group.fr/", "images/nexter.png", 
                                 "2011-11-01", "2014-05-11", 
-                                "Maquettage d'IHM, Développement de logiciels, ergonomie IHM", 
+                                constant("EXPE_AKKA_NEXTER_MISSION"), 
                                 array(), true);
                                   
-$akka_mission2 = new ItemEmploi("Thales Communications & Security", "Développeur", "Gennevilliers (92)", 
+$akka_mission2 = new ItemEmploi("Thales Communications & Security", constant("EXPE_AKKA_THALES"), "Gennevilliers (92)", 
                                   "https://www.thalesgroup.com/fr", "images/thales.png", 
                                   "2011-10-01", "2011-11-01", 
-                                  "Développement d'un outil de test en Java", 
+                                  constant("EXPE_AKKA_THALES_MISSION"), 
                                   array(), true);
                                   
-$akka = new ItemEmploi("AKKA Technologies", "Consultant", "Levallois-Perret (92)", "https://www.akka-technologies.com/",
+$akka = new ItemEmploi(constant("EXPE_AKKA"), constant("EXPE_AKKA_TITLE"), "Levallois-Perret (92)", "https://www.akka-technologies.com/",
                        "images/akka.png", "2011-10-01", "2014-05-01",
                        "", array($akka_mission1, $akka_mission2));
-$akka->print_(2);
+$akka->print_(2, $lang);
 
-$incka_mission1 = new ItemEmploi("Safran Morpho", "Développeur", "Osny (95)", 
+$incka_mission1 = new ItemEmploi("Safran Morpho", constant("EXPE_INCKA_MORPHO"), "Osny (95)", 
                                 "http://www.morpho.com/", "images/morpho.png", 
                                 "2010-08-01", "2011-10-01", 
-                                "Développement de logiciels biométriques (Empreintes, portraits et iris)", 
+                                constant("EXPE_INCKA_MORPHO_MISSION"), 
                                 array(), true);
                                   
-$incka = new ItemEmploi("INCKA (Astek)", "Consultant", "Boulogne-Billancourt (92)", "http://www.groupeastek.com/fr",
+$incka = new ItemEmploi(constant("EXPE_INCKA"), constant("EXPE_INCKA_TITLE"), "Boulogne-Billancourt (92)", "http://www.groupeastek.com/fr",
                        "images/incka.png", "2010-08-01", "2011-10-01",
                        "", array($incka_mission1));
-$incka->print_(2);
+$incka->print_(2, $lang);
 
-$ensc_mission1 = new ItemEmploi("Thales Optronique", "Stage de fin d'étude", "Elancourt (78)", 
+$ensc_mission1 = new ItemEmploi("Thales Optronique", constant("EXPE_ENSC_THALES"), "Elancourt (78)", 
                                 "https://www.thalesgroup.com/fr", "images/thales.png", 
                                 "2010-02-01", "2010-08-11", 
-                                "Implémentation du module de préparation de mission pour les robots terrestres", 
+                                constant("EXPE_ENSC_THALES_MISSION"), 
                                 array(), true);
                                   
-$ensc_mission2 = new ItemEmploi("Laboratoire IMF", "Stage de 2ème année", "Bordeaux (33)", 
+$ensc_mission2 = new ItemEmploi("Laboratoire IMF", constant("EXPE_ENSC_LABO"), "Bordeaux (33)", 
                                 "http://www.cnrs.fr/", "images/cnrs.png", 
                                 "2009-04-01", "2009-07-11", 
-                                "Implémentation d'une interface Matlab pour faciliter le traitement des images IRM issues d’un groupe de patients", 
+                                constant("EXPE_ENSC_LABO_MISSION"), 
                                 array(), true);
                                   
-$ensc_mission3 = new ItemEmploi("Technic'Ortho", "Stage de 1ère année", "Lay-Saint-Christophe (54)", 
+$ensc_mission3 = new ItemEmploi("Technic'Ortho", constant("EXPE_ENSC_TECH"), "Lay-Saint-Christophe (54)", 
                                 "http://www.technic-ortho.com/", "images/technicortho.png", 
                                 "2008-05-01", "2008-07-01", 
-                                "Conception de prothèses et d'orthèses", 
+                                constant("EXPE_ENSC_TECH_MISSION"), 
                                 array(), true);
                                   
-$ensc = new ItemEmploi("ENSC", "Stagiaire", "Bordeaux (33)", "https://www.ensc.fr/",
+$ensc = new ItemEmploi(constant("EXPE_ENSC"), constant("EXPE_ENSC_TITLE"), "Bordeaux (33)", "https://www.ensc.fr/",
                        "images/ensc.png", "2007-09-01", "2010-08-01",
                        "", array($ensc_mission1, $ensc_mission2, $ensc_mission3), false, false);
-$ensc->print_(2);
+$ensc->print_(2, $lang);
 ?>
         </div>
         <div id="content" class="competence">
@@ -225,23 +225,23 @@ $competence1->print_(3);
                     <th class="nonpremier" colspan="6"><?php echo constant("SKIL_METHODS"); ?></th>
                 </tr>
 <?php
-$competence1 = new ItemCompetence("Ergonomie", 5);
+$competence1 = new ItemCompetence(constant("SKIL_METH_ERGO"), 5);
 $competence1->print_(3);
 
-$competence1 = new ItemCompetence("Agile", 4);
+$competence1 = new ItemCompetence(constant("SKIL_METH_AGILE"), 4);
 $competence1->print_(3);
 
-$competence1 = new ItemCompetence("Scrum", 4);
+$competence1 = new ItemCompetence(constant("SKIL_METH_SCRUM"), 4);
 $competence1->print_(3);
 ?>
                 <tr>
                     <th class="nonpremier" colspan="6"><?php echo constant("SKIL_LANGUAGES"); ?></th>
                 </tr>
 <?php
-$competence1 = new ItemCompetence("Anglais", 3);
+$competence1 = new ItemCompetence(constant("SKIL_LANG_EN"), 3);
 $competence1->print_(3);
 
-$competence1 = new ItemCompetence("Allemand", 1);
+$competence1 = new ItemCompetence(constant("SKIL_LANG_DE"), 1);
 $competence1->print_(3);
 ?>
             </table>

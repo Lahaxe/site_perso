@@ -31,8 +31,24 @@
             $this->_displayTime = $displayTime;
 		}
         
-        function compute_time()
+        function compute_time($lang = 'fr')
         {
+            $month_str = 'mois';
+            $year_str = 'an';
+            $add_s = false;
+            switch ($lang) 
+            {
+                case 'fr':
+                    $month_str = 'mois';
+                    $year_str = 'an';
+                    break;
+                case 'en':
+                    $month_str = 'mth';
+                    $year_str = 'yr';
+                    $add_s = true;
+                    break;
+            }
+            
             $years = floor(($this->_to-$this->_from)/31536000);
             $months = floor(($this->_to-$this->_from)/2628000);
             
@@ -41,8 +57,7 @@
             $format = '';
             if ($years > 0)
             {
-                $format .= $years;
-                $format .= 'an';
+                $format .= $years.' '.$year_str;
                 
                 if ($years > 1)
                 {
@@ -50,22 +65,26 @@
                 }
                 $format .= ' ';
             }
-            $format .= $months.'mois';
-            
+            $format .= $months.' '.$month_str;
+            if ($months > 1 && $add_s)
+            {
+                $format .= 's';
+            }
+                
             return $format;
         }
         
-        function print_($tab)
+        function print_($tab, $lang = 'fr')
         {
             $tabulation = get_tabulation($tab);
             
-            $diffTimeStr = $this->compute_time();
+            $diffTimeStr = $this->compute_time($lang);
             
             if ($this->_ismission)
             {
                 echo_line("<tr class=\"mission\">", add_tabulation($tabulation));
                 echo_line("<td rowspan=2 class=\"mission_logo\"><img src=\"".$this->_picture."\" /></td>", add_tabulation($tabulation));
-                echo_line("<td class=\"td_role\">".$this->_job." pour <a href=\"".$this->_link."\">".$this->_name."</a></td>", $tabulation);
+                echo_line("<td class=\"td_role\">".$this->_job." <a href=\"".$this->_link."\">".$this->_name."</a></td>", $tabulation);
                 echo_line("<td class=\"td_lieux\"><img class=\"picto\" src=\"images/lieu.svg\" title=\"Ville\" />".$this->_location."</td>", $tabulation);
                 echo_line("<td class=\"td_duree\"><img class=\"picto\" src=\"images/date.svg\" title=\"".date('F Y', $this->_from)." - ".date('F Y', $this->_to)."\" />".$diffTimeStr."</td>", $tabulation);
                 echo_line("</tr>", remove_tabulation($tabulation));
@@ -94,7 +113,7 @@
                     echo_line("<td rowspan=2 class=\"emploi_logo\"><img src=\"".$this->_picture."\" /></td>", add_tabulation($tabulation));
                 }
                 
-                echo_line("<td class=\"td_role\">".$this->_job." pour <a href=\"".$this->_link."\">".$this->_name."</a></td>", $tabulation);
+                echo_line("<td class=\"td_role\">".$this->_job." <a href=\"".$this->_link."\">".$this->_name."</a></td>", $tabulation);
                 echo_line("<td class=\"td_lieux\"><img class=\"picto\" src=\"images/lieu.svg\" title=\"Ville\" />".$this->_location."</td>", $tabulation);
                 if ($this->_displayTime)
                 {
@@ -111,7 +130,7 @@
                     foreach ($this->_missions as $mission)
                     {
                         $mission->_ismission = true;
-                        $mission->print_($tab+3);
+                        $mission->print_($tab+3, $lang);
                     }
                 }
                 else
